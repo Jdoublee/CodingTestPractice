@@ -18,29 +18,28 @@ int main() {
 	}
 	sort(v.begin(),v.end());
 	
-	int left=1; // 또는 0 . v[0]이 될 수 없음(반례 존재)
+	int left=1; // 또는 0 . v[0]이 될 수 없음(반례 존재). 거리기준
 	int right=v[n-1];// 또는 v[n-1] - v[0]
 	int res=-1;
 	
-	while(left<=right){
-		int mid=(left+right)/2;
-		int before=0;
-		int cnt=1;
-		
-		for(int i=1;i<n;i++){
-			if(v[i]-v[before]>=mid){
-				before=i;
-				cnt++;
-			}
-		}
-		if(cnt>=c)
-			left=mid+1;
-		else
-			right=mid-1;
-			
-		if(res<mid&&cnt>=c)
-			res=mid;
-	}
+    while(left<=right){
+        int mid=(left+right)/2;
+        int before=0;
+        int cnt=1;
+        
+        for(int i=1;i<n;i++){
+            if(v[i]-v[before]>=mid){
+                before=i;
+                cnt++;
+            }
+        }
+        if(cnt>=c){
+            left=mid+1;
+            res=mid;
+        }else{
+            right=mid-1;
+        }
+    }
 	cout<<res<<"\n";
 	
 	return 0;
