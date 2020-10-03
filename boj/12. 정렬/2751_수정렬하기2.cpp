@@ -6,9 +6,9 @@ using namespace std;
 int sorted[1000000]; // 정렬된 원소 저장할 임시 배열
 // merge sort 구현
 void merge(int arr[],int l,int m,int r){
-    // i: 정렬된 왼쪽 리스트에 대한 인덱스
-	// j: 정렬된 오른쪽 리스트에 대한 인덱스
-	// k: 정렬될 리스트에 대한 인덱스
+    // i : 정렬된 왼쪽 리스트에 대한 인덱스
+    // j : 정렬된 오른쪽 리스트에 대한 인덱스
+    // k : 정렬될 리스트에 대한 인덱스
     int i=l,j=m+1;
     int k=l;
     //합병
@@ -33,8 +33,8 @@ void mergeSort(int arr[],int l,int r){
     if(l<r){
         int m=(l+r)/2; // divide
         mergeSort(arr,l,m); // conquer
-        mergeSort(arr,m+1,r); // conqurt
-        merge(arr,l,m,r); //combine
+        mergeSort(arr,m+1,r); // conquer
+        merge(arr,l,m,r); // combine
     }
 }
 int main() {
