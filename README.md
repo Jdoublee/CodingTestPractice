@@ -3,6 +3,29 @@
 
 
 
+##  - 시간초과 방지
+
+1) cpp
+
+```cpp
+ios_base :: sync_with_stdio(false);
+cin.tie(NULL);
+cout.tie(NULL);
+// 코드 앞에 추가
+```
+
+2) python3
+
+```python
+import sys
+n = sys.stdin.readline() 
+# input() 대신 사용
+```
+
+
+
+
+
 ## 0) 현실적이고 직관적인 공부 순서
 
 1~3번만 제대로 하면 된다. 4번은 추가적으로 공부.
