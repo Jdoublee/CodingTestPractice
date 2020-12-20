@@ -20,6 +20,7 @@ cout.tie(NULL);
 import sys
 n = sys.stdin.readline() 
 # input() 대신 사용
+# input = sys.stdin.readline 꼴로 선언 후 input() 사용 가능
 ```
 
 
