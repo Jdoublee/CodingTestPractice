@@ -18,9 +18,10 @@ cout.tie(NULL);
 
 ```python
 import sys
-n = sys.stdin.readline() 
+n = sys.stdin.readline().rstrip() # rstrip() 잊지말기^^77
 # input() 대신 사용
-# input = sys.stdin.readline 꼴로 선언 후 input() 사용 가능
+# input = sys.stdin.readline 꼴로 선언 후 input().rstrip() 사용 가능
+
 ```
 
 
