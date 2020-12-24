@@ -1,5 +1,5 @@
 # import sys
-# input = sys.stdin.readline # 쓰면 런타임에러가 난다,,,,
+# input = sys.stdin.readline # 쓰면 런타임에러가 난다,,,, -> rstrip() 없어서! '\n'는 int 형으로 변환 불가하기 때문에 에러 발생
 
 n, m = map(int, input().split())
 
