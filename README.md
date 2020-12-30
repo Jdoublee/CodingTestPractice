@@ -94,7 +94,7 @@ n = sys.stdin.readline().rstrip() # rstrip() 잊지말기^^77
 
 
 
-## 3) 카카오 기출 문제
+## 3) 프로그래머스
 
-### - [프로그래머스](https://programmers.co.kr/learn/challenges?tab=all_challenges)
+### - [모든 문제](https://programmers.co.kr/learn/challenges?tab=all_challenges)
 
