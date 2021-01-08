@@ -3,7 +3,7 @@ import heapq
 def solution(scoville, K):
     
     h = [] # heapq 저장
-    # h.heapify(scoville) 로 아래 포문 구현 가능. 히피파이~~
+    # heapq.heapify(scoville) 로 기존 리스트 힙으로 변환 가능
     for s in scoville:
         heapq.heappush(h, s)
     
@@ -18,7 +18,7 @@ def solution(scoville, K):
 
         if h[0] >= K: # 문제 조건 만족하면 리턴
             return cnt
-            
+
         # 다음과 같은 풀이도 가능
         # s = heapq.heappop(scoville)
         # f = heapq.heappushpop(scoville, f + s + s) # push 후 pop 동작. 시간 더 짧게 걸린다고.
