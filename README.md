@@ -26,6 +26,22 @@ n = sys.stdin.readline().rstrip() # rstrip() 잊지말기^^77
 
 
 
+## - 런타임에러 방지
+
+1) python3
+
+```python
+import sys
+sys.setrecursionlimit(10**6)
+# 파이썬이 정한 최대 재귀 깊이를 변경해줌
+# 기본 1000 -> 10000 or 10**6 정도로 변경
+# 재귀 함수 사용할 때 (예:dfs)
+```
+
+
+
+
+
 ##  - dfs/bfs 차이
 
 > 탐색 범위가 넓은 경우와 전체 탐색을 하지 않아도 될 경우는 bfs를 이용하고 ,
