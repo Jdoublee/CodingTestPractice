@@ -102,6 +102,16 @@ sys.setrecursionlimit(10**6)
 
 #### 28. DFS와 BFS
 
+### - 백준 dfs문제 풀 때 주의사항
+
+- 아래 세 줄 필수 -> **시간 초과 / 런타임 에러** 발생 방지
+
+```python
+import sys
+sys.setrecursionlimit(10**6)
+input = sys.stdin.readline
+```
+
 
 
 ## 2) 알고리즘문제해결전략
