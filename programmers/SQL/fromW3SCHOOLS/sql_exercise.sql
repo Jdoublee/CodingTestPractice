@@ -77,3 +77,26 @@ SELECT AVG(Price) FROM Products;
 
 -- 5. calculate the sum of all the Price column values in the Products table.
 SELECT SUM(Price) FROM Products;
+
+
+-- LIKE
+-- The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.
+
+-- 1. select all records where the value of the City column starts with the letter "a".
+SELECT * FROM Customers WHERE City LIKE 'a%';
+
+-- 2. select all records where the value of the City column ends with the letter "a".
+SELECT * FROM Customers WHERE City LIKE '%a';
+
+-- 3. select all records where the value of the City column contains the letter "a".
+SELECT * FROM Customers WHERE City LIKE '%a%';
+
+-- 4. select all records where the value of the City column starts with letter "a" and ends with the letter "b".
+SELECT * FROM Customers WHERE City LIKE 'a%b';
+
+-- 5. select all records where the value of the City column does NOT start with the letter "a".
+SELECT * FROM Customers WHERE City NOT LIKE 'a%';
+
+
+-- WILDCARDS
+-- A wildcard character is used to substitute one or more characters in a string.
