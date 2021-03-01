@@ -100,3 +100,38 @@ SELECT * FROM Customers WHERE City NOT LIKE 'a%';
 
 -- WILDCARDS
 -- A wildcard character is used to substitute one or more characters in a string.
+
+-- 1. select all records where the second letter of the City is an "a".
+SELECT * FROM Customers WHERE City LIKE '_a%';
+
+-- 2. select all records where the first letter of the City is an "a" or a "c" or an "s".
+SELECT * FROM Customers WHERE City LIKE '[acs]%';
+
+-- 3. select all records where the first letter of the City starts with anything from an "a" to an "f".
+SELECT * FROM Customers WHERE City LIKE '[a-f]%';
+
+-- 4. select all records where the first letter of the City is NOT an "a" or a "c" or an "f".
+SELECT * FROM Customers WHERE City LIKE '[^acf]%';
+
+
+-- IN
+-- The IN operator allows you to specify multiple values in a WHERE clause.
+
+-- 1. select all the records where Country is either "Norway" or "France".
+SELECT * FROM Customers WHERE Country IN ('Norway', 'France');
+
+-- 2. select all the records where Country is NOT "Norway" and NOT "France".
+SELECT * FROM Customers WHERE Country NOT IN ('Norway', 'France');
+
+
+-- BETWEEN
+-- The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
+
+-- 1. select all the records where the value of the Price column is between 10 and 20.
+SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
+
+-- 2. select all the records where the value of the Price column is NOT between 10 and 20.
+SELECT * FROM Products WHERE Price NOT BETWEEN 10 AND 20;
+
+-- 3. select all the records where the value of the ProductName column is alphabetically between 'Geitost' and 'Pavlova'.
+SELECT * FROM Products WHERE ProductName BETWEEN 'Geitost' AND 'Pavlova';
