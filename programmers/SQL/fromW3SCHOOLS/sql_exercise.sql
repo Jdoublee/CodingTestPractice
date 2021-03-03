@@ -158,3 +158,13 @@ SELECT * FROM Orders INNER JOIN Customers ON Orders.CustomerID=Customers.Custome
 
 -- 3. select all the records from the Customers table plus all the matches in the Orders table.
 SELECT * FROM Orders RIGHT JOIN Customers ON Order.CustomerID=Customers.CustomerID;
+
+
+-- GROUP BY
+-- The GROUP BY statement groups rows that have the same values into summary rows.
+
+-- 1. list the number of customers in each country.
+SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country;
+
+-- 2. list the number of customers in each country, ordered by the country with the most customers first.
+SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country ORDER BY COUNT(CustomerID) DESC;
