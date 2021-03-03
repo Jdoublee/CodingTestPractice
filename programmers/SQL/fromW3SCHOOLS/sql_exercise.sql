@@ -135,3 +135,26 @@ SELECT * FROM Products WHERE Price NOT BETWEEN 10 AND 20;
 
 -- 3. select all the records where the value of the ProductName column is alphabetically between 'Geitost' and 'Pavlova'.
 SELECT * FROM Products WHERE ProductName BETWEEN 'Geitost' AND 'Pavlova';
+
+
+-- ALIAS
+-- SQL aliases are used to give a table, or a column in a table, a temporary name.
+
+-- 1. make an ALIAS of the PostalCode column, the column should be called Pno instead.
+SELECT CustomerName, Address, PostalCode AS Pno FROM Customers;
+
+-- 2. refer to the table as Consumers instead of Customers.
+SELECT * FROM Customers AS Consumers;
+
+
+-- JOIN
+-- A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+
+-- 1. join the two tables Orders and Customers, using the CustomerID field in both tables as the relationship between the two tables.
+SELECT * FROM Orders LEFT JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+
+-- 2. select all records from the two tables where there is a match in both tables.
+SELECT * FROM Orders INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+
+-- 3. select all the records from the Customers table plus all the matches in the Orders table.
+SELECT * FROM Orders RIGHT JOIN Customers ON Order.CustomerID=Customers.CustomerID;
