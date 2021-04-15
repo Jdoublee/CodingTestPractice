@@ -8,9 +8,9 @@ while nn != n:
 	if i == 0:
 		nn = n
 		i += 1
-	
+        
     first = nn//10 + nn%10
-	nn = nn%10*10 + first%10
+    nn = nn%10*10 + first%10
 
 	t += 1
 
