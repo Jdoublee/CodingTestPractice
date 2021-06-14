@@ -1,0 +1,3 @@
+-- Ketty gives Eve a task to generate a report containing three columns: Name, Grade and Mark. Ketty doesn't want the NAMES of those students who received a grade lower than 8. The report must be in descending order by grade. If there is more than one student with the same grade (8-10) assigned to them, order those particular students by their name alphabetically.
+
+SELECT IF(GRADE<8,NULL,NAME),GRADE,MARKS FROM STUDENTS JOIN GRADES WHERE MARKS>=MIN_MARK AND MARKS<=MAX_MARK ORDER BY GRADE DESC,NAME;
